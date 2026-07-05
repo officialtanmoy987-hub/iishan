@@ -1,0 +1,6 @@
+{
+  "name": "Romantic Invitation",
+  "description": "An interactive, beautifully designed romantic invitation featuring playful Yes/No states, a customizable outing planner, a heart-catching love meter game, promises flip-cards, and a celebratory WhatsApp surprise.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

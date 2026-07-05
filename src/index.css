@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Nunito Sans", sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+
+  --color-brand-primary: #9c3f53;
+  --color-brand-primary-light: #ff8da1;
+  --color-brand-secondary: #68548d;
+  --color-brand-tertiary: #7b5549;
+  --color-brand-bg: #fef8f9;
+}
+
+/* Glassmorphism custom classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(156, 63, 83, 0.1);
+  border-right: 1px solid rgba(156, 63, 83, 0.1);
+}
+
+.glow-button {
+  background: linear-gradient(135deg, #ff8da1 0%, #9c3f53 100%);
+  box-shadow: 0 4px 15px rgba(156, 63, 83, 0.3);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glow-button:hover {
+  box-shadow: 0 8px 25px rgba(156, 63, 83, 0.5);
+  transform: scale(1.04);
+}
+
+/* Custom interactive animations */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(3deg); }
+}
+
+@keyframes walk-across {
+  0% { transform: translateX(-120px) scaleX(1); }
+  45% { transform: translateX(100vw) scaleX(1); }
+  48% { transform: translateX(100vw) scaleX(-1); }
+  95% { transform: translateX(-120px) scaleX(-1); }
+  100% { transform: translateX(-120px) scaleX(1); }
+}
+
+@keyframes peek-up {
+  0%, 90%, 100% { transform: translateY(100%); }
+  93%, 97% { transform: translateY(0); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite ease-in-out;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s infinite ease-in-out;
+}
+
+.animate-walk-across {
+  animation: walk-across 25s linear infinite;
+}
+
+.animate-peek-up {
+  animation: peek-up 12s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite ease-in-out;
+}
+
+/* Hide default scrollbars for mood selector and others while preserving scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Perspective 3D flips helper */
+.perspective {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
